@@ -2,6 +2,7 @@ import React, { forwardRef, useEffect, useImperativeHandle, useRef } from 'react
 import * as echarts from 'echarts' 
 import demoimg from '@/assets/yay.jpg'
 import { exportPDF } from '@/utils/pdfUtil'
+import { useManualFn } from '@/hooks/func'
 
 const HelloWorld = forwardRef(function HelloWorld(props, ref) {
   const divRef = useRef<HTMLDivElement>(null)
@@ -48,9 +49,11 @@ const HelloWorld = forwardRef(function HelloWorld(props, ref) {
 
 const Pdfpg = () => {
   const cRef = useRef()
+  const {loading, run} = useManualFn(exportPDF)
   const onExport = () => {
-    exportPDF('pdfdemo', cRef.current)
+    run('pdfdemo', cRef.current)
   }
+  console.log('loading', loading)
   return (
     <div>
       pdf playground
