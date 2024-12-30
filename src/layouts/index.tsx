@@ -9,7 +9,7 @@ export default function Layout() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/docs">Docs</Link>
+          <Link to="/amappg">AMap pg</Link>
         </li>
         <li>
           <Link to="/pdfpg">pdf pg</Link>

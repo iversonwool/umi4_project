@@ -9,6 +9,7 @@
     "start": "npm run dev"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "echarts": "^5.5.1",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
