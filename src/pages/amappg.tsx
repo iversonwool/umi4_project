@@ -1,18 +1,20 @@
-import { loadAMapAsync } from "@/utils/amap";
 import { useEffect } from "react";
+import AMapGuard from "@/components/AMapGuard";
+
+function Demo(props) {
+  const {AMap} = props
+  return <div>hee</div>
+}
 
 const AMapPlayground = () => {
 
-  useEffect(() => {
-    (async () => {
-      await loadAMapAsync()
-      console.log('---', window.AMap)
-    })()
-  },  [])
+  
+
+  console.log('window', window.AMap)
   return (
-    <div>
-      <p>This is umi docs.</p>
-    </div>
+    <AMapGuard component={Demo}>
+      
+    </AMapGuard>
   );
 };
 
